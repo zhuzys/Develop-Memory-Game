@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdActivity2">
+
+    <!-- Рабочая (или оперативная) память представляет собой способность, с помощью которой мы сохраняем в уме элементы, необходимые нам для выполнения задачи. Бладаря рабочей или оперативной памяти мы можем: объединять два или более действия, происходящие примерно в одно и то же время, например, вспоминать и отвечать на вопросы, которые нам задали во время разговора. Соотносить новые знания с полученными ранее. Это позволяет нам обучаться. Сохранять в уме информацию, в то время как наше внимание сосредоточено на других вещах, например, мы можем готовить обед, разговаривая по телефону. -->
+
+
+    <TextView
+        android:id="@+id/some_id"
+        android:layout_width="332dp"
+        android:layout_height="590dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:autoText="true"
+        android:gravity="top"
+        android:text="@string/ad_text"
+        android:textAppearance="@style/some_id"
+        android:textSize="14dp"
+        android:textStyle="normal"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <View
+        android:id="@+id/line_10"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_baseline_clear_24"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/some_id"
+        app:layout_constraintEnd_toEndOf="@+id/some_id"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/some_id"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.824" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
