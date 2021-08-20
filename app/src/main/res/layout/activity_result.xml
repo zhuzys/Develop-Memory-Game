@@ -7,6 +7,7 @@
     android:background="@drawable/some_id">
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -17,16 +18,16 @@
             android:layout_height="20dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="37.98dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="12.98dp"
-            android:background="@drawable/ic_baseline_clear_24"
+            android:background="@drawable/clear"
             android:backgroundTint="#000000" />
 
 
         <ProgressBar
             android:id="@+id/progressBar"
             style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
-            android:layout_width="280dp"
+            android:layout_width="260dp"
             android:layout_height="10dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -44,8 +45,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="40dp"
-            android:background="@drawable/ic_baseline_favorite_24"
-
+            android:background="@drawable/favorite"
             android:text="5"
             android:textAlignment="center"
             android:textColor="#FBFBFB"
@@ -54,7 +54,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/tv_score"
+        android:id="@+id/tvScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -265,6 +265,7 @@
     </TextView>
 
     <Button
+        android:textAllCaps="false"
         android:id="@+id/tomain"
         android:layout_width="220dp"
         android:layout_height="45dp"
@@ -272,15 +273,9 @@
         android:layout_alignParentTop="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:background="@drawable/rectangle_8"
+        app:backgroundTint="@null"
+        android:background="@drawable/nav_btn"
         android:text="В главную" />
 </LinearLayout>
-
-
-
-
-
-    <!-- drawable/rectangle_8.xml -->
-
 
 

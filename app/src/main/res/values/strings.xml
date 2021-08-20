@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Memory</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
     <string name="some_id">
 
 00:30
@@ -15,5 +17,4 @@
     <string name="some_id33">Волк</string>
     <string name="some_id44">Заяц</string>
     <string name="some_id55">Медведь</string>
-
 </resources>
