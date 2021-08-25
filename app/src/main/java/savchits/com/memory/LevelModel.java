@@ -25,7 +25,6 @@ public class LevelModel {
     }
     public
     int setPhoto() {
-
         return photo;
     }
 }

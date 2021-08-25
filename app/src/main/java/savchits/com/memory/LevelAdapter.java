@@ -49,8 +49,6 @@ public class MyViewHolder extends RecyclerView.ViewHolder  {
         LevelModel level =levels.get(position);
         holder.levelView.setText (level.getLevel());
         holder.photoView.setImageResource (level.getPhoto());
-
-
     }
     @Override
     public int getItemCount(){

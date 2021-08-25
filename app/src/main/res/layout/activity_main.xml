@@ -8,6 +8,7 @@
 
 
     <Button
+        android:textAllCaps="false"
         android:id="@+id/dalee"
         android:layout_width="220dp"
         android:layout_height="45dp"

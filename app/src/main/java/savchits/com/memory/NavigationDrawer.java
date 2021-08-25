@@ -1,6 +1,5 @@
 package savchits.com.memory;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -13,7 +12,6 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.ActivityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -42,13 +40,7 @@ public class NavigationDrawer extends AppCompatActivity {
         drawerLayout.addDrawerListener (toggle);
         toggle.syncState();
 
-      /*  Intent intent = new Intent(getApplicationContext(), LevelPage.class);
-        startActivity(intent);*/
-
-        changeActivity(new LevelPage());
-
-
-      //  changeFragment (new LevelPage());
+        changeFragment (new LevelPage());
 
         navigationView.setNavigationItemSelectedListener ( new NavigationView.OnNavigationItemSelectedListener () {
             @Override
@@ -81,9 +73,5 @@ public class NavigationDrawer extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager ().beginTransaction ();
         fragmentTransaction.replace(R.id.frame,fragment);
         fragmentTransaction.commit();
-    }
-    public  void changeActivity(Activity activity) {
-        startActivity(new Intent(getApplicationContext(), LevelPage.class));
-
     }
 }

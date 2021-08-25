@@ -1,7 +1,6 @@
 package savchits.com.memory;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,28 +10,29 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Toast;
 
 
 import savchits.com.memory.databinding.ActivityMemorizationBinding;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-import java.util.Timer;
 
 public class  Memorization extends AppCompatActivity {
     ActivityMemorizationBinding binding;
+   // LinearLayout lin4, lin5;
     List<String> item;
     Context context;
     int value1;
-    int life=5;
-    private  CountDownTimer countDownTimer;
+    int life = 5;
+    int countArray = 0;
+    int timer = 0;
+    SharedPreferences sharedPreferences;
+
+    private CountDownTimer countDownTimer;
+    //  private LevelPage levelPage;
     //  RecyclerView recyclerView;
 
 
@@ -41,18 +41,21 @@ public class  Memorization extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMemorizationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        item = initData();
 
-        Handler handler = new Handler();
+
+
+
+       item = initData();
+       Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                timer();
+                timer(30000);
             }
-        },1000);
+        }, 1000);
 
-
-        LinearLayoutManager layoutManager =  new LinearLayoutManager(context) {
+        //recyclerView
+        LinearLayoutManager layoutManager = new LinearLayoutManager(context) {
             @Override
             public boolean canScrollVertically() {
                 return false;
@@ -62,63 +65,40 @@ public class  Memorization extends AppCompatActivity {
         binding.rv.setNestedScrollingEnabled(false);
         RvAdapter rvAdapter = new RvAdapter(item, this);
         binding.rv.setAdapter(rvAdapter);
+        //   levelPage = new LevelPage();
 
 
-         try {
-             if (value1 <= 0) {
-                 value1 = 5;
-                 binding.tvLife.setText(value1 + "");
-                 binding.progressBar.setProgress(value1 * 20);
-                 Intent intent = new Intent(getApplicationContext(), CheckActivity.class);
-                 startActivity(intent);
-                 finish();
-             }
-         }catch (NullPointerException e) {
-             e.printStackTrace();
-         }
-
-        // getLife();
-
-        SharedPreferences sharedPreferences = getSharedPreferences("myKey", MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("myKey", MODE_PRIVATE);
         value1 = sharedPreferences.getInt("life", 0);
-        if(value1 ==0) {
-            value1 =5;
+        binding.tvLife.setText(value1 + "");
+        binding.progressBar.setProgress(value1 * 20);
+        if (value1 <= 0) {
+            value1 = getIntent().getIntExtra("life2", 0);
+            String pos= getIntent().getStringExtra("pos");
             binding.tvLife.setText(value1 + "");
             binding.progressBar.setProgress(value1 * 20);
-            Intent intent = new Intent(getApplicationContext(),CheckActivity.class);
-            startActivity(intent);
-            finish();
-        }
-        else {
-            binding.tvLife.setText(value1 + "");
-            binding.progressBar.setProgress(value1 * 20);
-            Intent intent = new Intent(getApplicationContext(), CheckActivity.class);
-            startActivity(intent);
-            finish();
         }
 
 
-
-      /*  if (value1 <= 0) {
-
-          *//*  SharedPreferences sharedPref = getSharedPreferences("myKey", MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPref.edit();
-            editor.putInt("life", value1);
-            editor.apply();*//*
-            Intent intent = new Intent(getApplicationContext(), LevelPage.class);
-            startActivity(intent);
-        }*/
+        binding.line10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), LevelPage.class);
+                startActivity(intent);
+            }
+        });
 
 
         binding.dalee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 countDownTimer.cancel();
-                String mword1 = item.get(0);
-                String mword2 = item.get(1);
-                String mword3 = item.get(2);
-                String mword4 = item.get(3);
-                String mword5 = item.get(4);
+                String mword1 = item.get(0).toLowerCase();
+                String mword2 = item.get(1).toLowerCase();
+                String mword3 = item.get(2).toLowerCase();
+                String mword4 = item.get(3).toLowerCase();
+                String mword5 = item.get(4).toLowerCase();
+
 
                 SharedPreferences sharedPref = getSharedPreferences("myKey", MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPref.edit();
@@ -131,16 +111,32 @@ public class  Memorization extends AppCompatActivity {
                 editor.apply();
                 Intent intent = new Intent(Memorization.this, CheckActivity.class);
                 startActivity(intent);
-                finish();
+
 
             }
         });
 
+      /*  int pos= getIntent().getIntExtra("pos", 0);
+        if(pos ==0) {
+            choose(0);
+
+
+        }
+        if(pos ==1) {
+        //   LinearLayout  lin4 = findViewById(R.id.l4);
+           // lin5= findViewById(R.id.l5);
+         //   lin4.setVisibility(View.VISIBLE);
+            choose(1);
+        }
+        if(pos ==2) {
+
+        }
+*/
     }
 
 
-    private void timer() {
-        countDownTimer =  new CountDownTimer(30000, 1000) {
+    private void timer(int mill) {
+        countDownTimer = new CountDownTimer(mill, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 binding.time.setText("00:" + millisUntilFinished / 1000);
@@ -153,7 +149,7 @@ public class  Memorization extends AppCompatActivity {
                 cancel();
                 binding.time.setText("Done!");
                 startActivity(new Intent(getApplicationContext(), CheckActivity.class));
-                finish();
+                //  cancel();
 
             }
 
@@ -179,18 +175,20 @@ public class  Memorization extends AppCompatActivity {
         list.add("Цепочка");
         Collections.shuffle(list);
 
+
         return list;
-
+    }
+    public void choose (int pos) {
+      //  item = initData(3 +pos);
+       Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                timer(6000+ pos*2000);
+            }
+        }, 1000);
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
 
 
 }

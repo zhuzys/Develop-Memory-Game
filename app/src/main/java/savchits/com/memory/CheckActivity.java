@@ -22,19 +22,27 @@ public class CheckActivity extends AppCompatActivity {
         binding = ActivityCheckBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
         SharedPreferences sharedPreferences = getSharedPreferences ( "myKey", MODE_PRIVATE );
         value1 = sharedPreferences.getInt("life", 0);
         binding.imageButton.setText(value1 +"");
         binding.progressBar.setProgress(value1*20);
 
+        binding.line10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CheckActivity.this, Memorization.class));
+            }
+        });
+
         binding.check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String word1 = binding.et1.getText().toString().trim();
-                String word2 = binding.et2.getText().toString().trim();
-                String word3 = binding.et3.getText().toString().trim();
-                String word4 = binding.et4.getText().toString().trim();
-                String word5 = binding.et5.getText().toString().trim();
+                String word1 = binding.et1.getText().toString().trim().toLowerCase ();
+                String word2 = binding.et2.getText().toString().trim().toLowerCase ();
+                String word3 = binding.et3.getText().toString().trim().toLowerCase ();
+                String word4 = binding.et4.getText().toString().trim().toLowerCase ();
+                String word5 = binding.et5.getText().toString().trim().toLowerCase ();
 
 
                 if(TextUtils.isEmpty(word1))
@@ -59,7 +67,8 @@ public class CheckActivity extends AppCompatActivity {
                     Toast.makeText ( CheckActivity.this, "Пожалуйста, заполните все поля", Toast.LENGTH_SHORT ).show ();
                 }
 
-                else {
+
+
                     Intent intent = new Intent ( CheckActivity.this, ResultActivity.class);
                     intent.putExtra("word1", word1);
                     intent.putExtra("word2", word2);
@@ -67,9 +76,8 @@ public class CheckActivity extends AppCompatActivity {
                     intent.putExtra("word4", word4);
                     intent.putExtra("word5", word5);
                     startActivity(intent);
-                    finish();
 
-                }
+
             }
         });
     }

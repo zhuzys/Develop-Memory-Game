@@ -6,159 +6,510 @@
     android:background="@drawable/some_id"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/list_item"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/list_item"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginRight="7dp"
-                android:text="@string/some_id1"
-                android:textAppearance="@style/some_id" />
-
-            <TextView
-                android:id="@+id/tv1"
-                android:layout_width="230dp"
-                android:layout_height="40dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/rectangle_3"
-                android:gravity="center"
-                android:text="@string/some_id11"
-                android:textAppearance="@style/some_id" />
-        </LinearLayout>
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:text="@string/some_id1"
+                    android:textAppearance="@style/some_id" />
 
-            <TextView
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_3"
+                    android:gravity="center"
+                    android:text="@string/some_id11"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginRight="7dp"
-                android:text="02"
-                android:textAppearance="@style/some_id" />
-
-            <TextView
-                android:id="@+id/tv2"
-                android:layout_width="230dp"
-                android:layout_height="40dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/rectangle_3"
-                android:gravity="center"
-                android:text="@string/some_id22"
-                android:textAppearance="@style/some_id" />
-        </LinearLayout>
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:text="02"
+                    android:textAppearance="@style/some_id" />
 
-            <TextView
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_3"
+                    android:gravity="center"
+                    android:text="@string/some_id22"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
 
-
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginRight="7dp"
-                android:text="@string/some_id3"
-                android:textAppearance="@style/some_id" />
-
-            <TextView
-                android:id="@+id/tv3"
-                android:layout_width="230dp"
-                android:layout_height="40dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/rectangle_3"
-                android:gravity="center"
-                android:text="@string/some_id33"
-                android:textAppearance="@style/some_id" />
-        </LinearLayout>
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal">
+                <TextView
 
-            <TextView
 
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:text="@string/some_id3"
+                    android:textAppearance="@style/some_id" />
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_3"
+                    android:gravity="center"
+                    android:text="@string/some_id33"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginRight="7dp"
-                android:text="@string/some_id4"
-                android:textAppearance="@style/some_id" />
-
-            <TextView
-                android:id="@+id/tv4"
-                android:layout_width="230dp"
-                android:layout_height="40dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/rectangle_3"
-                android:gravity="center"
-                android:text="@string/some_id44"
-                android:textAppearance="@style/some_id" />
-        </LinearLayout>
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal">
+                <TextView
 
-            <TextView
-                android:id="@+id/some_id1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:text="@string/some_id4"
+                    android:textAppearance="@style/some_id" />
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_3"
+                    android:gravity="center"
+                    android:text="@string/some_id44"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginRight="7dp"
-                android:text="@string/some_id5"
-                android:textAppearance="@style/some_id" />
-
-            <TextView
-                android:id="@+id/tv5"
-                android:layout_width="230dp"
-                android:layout_height="40dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/rectangle_3"
-                android:gravity="center"
-                android:text="@string/some_id55"
-                android:textAppearance="@style/some_id" />
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/some_id1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:text="@string/some_id5"
+                    android:textAppearance="@style/some_id" />
+
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_3"
+                    android:gravity="center"
+                    android:text="@string/some_id55"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:text="06"
+                    android:textAppearance="@style/some_id" />
+
+                <TextView
+                    android:id="@+id/tv6"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_3"
+                    android:gravity="center"
+                    android:text="@string/some_id44"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:text="07"
+                    android:textAppearance="@style/some_id" />
+
+                <TextView
+                    android:id="@+id/tv7"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_3"
+                    android:gravity="center"
+                    android:text="@string/some_id44"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:text="08"
+                    android:textAppearance="@style/some_id" />
+
+                <TextView
+                    android:id="@+id/tv8"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_3"
+                    android:gravity="center"
+                    android:text="@string/some_id44"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:text="09"
+                    android:textAppearance="@style/some_id" />
+
+                <TextView
+                    android:id="@+id/tv9"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_3"
+                    android:gravity="center"
+                    android:text="@string/some_id44"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:text="10"
+                    android:textAppearance="@style/some_id" />
+
+                <TextView
+                    android:id="@+id/tv10"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_3"
+                    android:gravity="center"
+                    android:text="@string/some_id44"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:text="11"
+                    android:textAppearance="@style/some_id" />
+
+                <TextView
+                    android:id="@+id/tv11"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_3"
+                    android:gravity="center"
+                    android:text="@string/some_id44"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:text="12"
+                    android:textAppearance="@style/some_id" />
+
+                <TextView
+                    android:id="@+id/tv12"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_3"
+                    android:gravity="center"
+                    android:text="@string/some_id44"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:text="13"
+                    android:textAppearance="@style/some_id" />
+
+                <TextView
+                    android:id="@+id/tv13"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_3"
+                    android:gravity="center"
+                    android:text="@string/some_id44"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:text="14"
+                    android:textAppearance="@style/some_id" />
+
+                <TextView
+                    android:id="@+id/tv14"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_3"
+                    android:gravity="center"
+                    android:text="@string/some_id44"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/l4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:text="15"
+                    android:textAppearance="@style/some_id" />
+
+                <TextView
+                    android:id="@+id/tv15"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_3"
+                    android:gravity="center"
+                    android:text="@string/some_id44"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/l5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:text="16"
+                    android:textAppearance="@style/some_id" />
+
+                <TextView
+                    android:id="@+id/tv16"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle_3"
+                    android:gravity="center"
+                    android:text="@string/some_id44"
+                    android:textAppearance="@style/some_id" />
+            </LinearLayout>
+
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

@@ -17,14 +17,14 @@
 
     <ImageView
         android:id="@+id/planet"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="186dp"
+        android:layout_height="141dp"
         android:layout_alignParentStart="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="104dp"
         android:layout_marginTop="40dp"
         android:src="@drawable/nav_planet"
-        app:elevation="10dp"/>
+        app:elevation="10dp" />
 
     <TextView
         android:id="@+id/text_pre"
@@ -95,7 +95,7 @@
                 android:layout_toRightOf="@+id/heart"
                 android:fontFamily="@font/mont"
                 android:text="Бесконечные жизни"
-                android:textColor="@color/white"
+                android:textColor="@color/nav"
                 android:textSize="16dp"
                 android:textStyle="bold" />
 
@@ -111,7 +111,7 @@
                 android:layout_marginEnd="49dp"
                 android:fontFamily="@font/mont"
                 android:text="Ваши ошибки станут не столь критичны"
-                android:textColor="@color/white"
+                android:textColor="@color/nav"
                 android:textSize="12dp" />
 
         </RelativeLayout>
@@ -153,7 +153,7 @@
                 android:layout_toRightOf="@+id/hand"
                 android:fontFamily="@font/mont"
                 android:text="Никакой рекламы"
-                android:textColor="@color/white"
+                android:textColor="@color/nav"
                 android:textSize="16dp"
                 android:textStyle="bold" />
 
@@ -169,7 +169,7 @@
                 android:layout_marginEnd="43dp"
                 android:fontFamily="@font/mont"
                 android:text="Избавьтесь от назойливых видеороликов"
-                android:textColor="@color/white"
+                android:textColor="@color/nav"
                 android:textSize="12dp" />
 
         </RelativeLayout>

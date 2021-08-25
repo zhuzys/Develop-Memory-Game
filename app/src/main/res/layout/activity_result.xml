@@ -6,6 +6,12 @@
     android:orientation="vertical"
     android:background="@drawable/some_id">
 
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
     <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
@@ -276,6 +282,8 @@
         app:backgroundTint="@null"
         android:background="@drawable/nav_btn"
         android:text="В главную" />
+
+
 </LinearLayout>
 
 

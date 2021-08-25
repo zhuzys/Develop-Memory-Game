@@ -9,12 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Memory">
-        <activity android:name=".PremiumPage"/>
-        <activity android:name=".QuestionPage"/>
-        <activity android:name=".ResultActivity"></activity>
+        <activity android:name=".PremiumPage" />
+        <activity android:name=".QuestionPage" />
+        <activity android:name=".ResultActivity" />
         <activity android:name=".CheckActivity" />
-        <activity android:name=".Memorization"/>
-        <activity android:name=".LevelPage"/>
+        <activity android:name=".Memorization" />
         <activity android:name=".NavigationDrawer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
